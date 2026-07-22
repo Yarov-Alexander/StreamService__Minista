@@ -1,0 +1,54 @@
+﻿node.exe : npm verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\no
+dejs\node_modules\npm\bin\npm-cli.js
+строка:1 знак:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (npm verbose cli...\bin\npm-cli.js 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+npm info using npm@11.16.0
+npm info using node@v24.18.0
+npm verbose title npm install sharp@0.32.6
+npm verbose argv "install" "--no-save" "--ignore-scripts" "false" "--foreground
+-scripts" "--loglevel" "verbose" "sharp@0.32.6"
+npm verbose logfile logs-max:10 dir:C:\Users\Magim\AppData\Local\npm-cache\_log
+s\2026-07-10T03_26_42_897Z-
+npm verbose logfile C:\Users\Magim\AppData\Local\npm-cache\_logs\2026-07-10T03_
+26_42_897Z-debug-0.log
+npm verbose shrinkwrap failed to load node_modules/.package-lock.json out of da
+te, updated: node_modules
+npm http fetch GET https://registry.npmjs.org/sharp attempt 1 failed with ETIME
+DOUT
+npm http fetch GET https://registry.npmjs.org/sharp attempt 2 failed with ETIME
+DOUT
+npm http fetch GET https://registry.npmjs.org/sharp attempt 3 failed with ETIME
+DOUT
+npm verbose type system
+npm verbose stack FetchError: request to https://registry.npmjs.org/sharp faile
+d, reason: 
+npm verbose stack     at ClientRequest.<anonymous> (C:\Program Files\nodejs\nod
+e_modules\npm\node_modules\minipass-fetch\lib\index.js:130:14)
+npm verbose stack     at ClientRequest.emit (node:events:509:28)
+npm verbose stack     at emitErrorEvent (node:_http_client:109:11)
+npm verbose stack     at _destroy (node:_http_client:993:9)
+npm verbose stack     at onSocketNT (node:_http_client:1014:5)
+npm verbose stack     at process.processTicksAndRejections (node:internal/proce
+ss/task_queues:91:21)
+npm error code ETIMEDOUT
+npm error errno ETIMEDOUT
+npm error network request to https://registry.npmjs.org/sharp failed, reason: 
+npm error network This is a problem related to network connectivity.
+npm error network In most cases you are behind a proxy or have bad network sett
+ings.
+npm error network
+npm error network If you are behind a proxy, please make sure that the 'proxy' 
+config is set properly.  See: 'npm help config'
+npm verbose cwd D:\vvvv
+npm verbose os Windows_NT 10.0.19045
+npm verbose node v24.18.0
+npm verbose npm  v11.16.0
+npm verbose exit 1
+npm verbose code 1
+npm error A complete log of this run can be found in: C:\Users\Magim\AppData\Lo
+cal\npm-cache\_logs\2026-07-10T03_26_42_897Z-debug-0.log
