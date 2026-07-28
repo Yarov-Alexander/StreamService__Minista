@@ -34,7 +34,8 @@ const menuItems = [
 console.log('URL:', url)
 console.log('ITEMS:', menuItems)
 
-const currentPage = url.split('/').pop() || 'index.html'
+const currentPage =
+  url === '/' ? 'index' : url.split('/').pop()
 
   return (
     <header
@@ -58,7 +59,7 @@ const currentPage = url.split('/').pop() || 'index.html'
                 <li className="header__menu-item" key={index}>
                   <a
                     className={classNames('header__menu-link', {
-                      'is-active': href === currentPage,
+                      'is-active': href.endsWith(`${currentPage}.html`),
                     })}
                     href={href}
                   >
