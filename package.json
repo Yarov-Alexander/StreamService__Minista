@@ -5,7 +5,8 @@
   "scripts": {
     "start": "minista",
     "build": "minista build",
-    "preview": "minista preview"
+    "preview": "minista preview",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "prettier": {
     "semi": false
