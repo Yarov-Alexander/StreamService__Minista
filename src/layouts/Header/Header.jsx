@@ -32,7 +32,7 @@ const Header = (props) => {
 console.log('URL:', url)
 console.log('ITEMS:', menuItems)
 
-const currentPage = url === '/' ? 'index.html' : url.split('/').pop()
+const currentPage = url.match(/[^/]+$/)?.[0] || 'index.html'
 
   return (
     <header
