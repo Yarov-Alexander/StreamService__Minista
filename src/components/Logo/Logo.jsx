@@ -12,13 +12,13 @@ const Logo = (props) => {
   return (
     <a
       className={classNames(className, 'logo')}
-      href="/"
+      href="./"
       title={title}
       aria-label={title}
     >
       <img
         className="logo__image"
-        src="./logo.svg"
+        src={`${import.meta.env.BASE_URL}logo.svg`}
         alt=""
         width={199}
         height={60}
