@@ -10,29 +10,31 @@ const Header = (props) => {
     isFixed,
   } = props
 
- const menuItems = [
+const BASE_URL = import.meta.env.BASE_URL
+
+const menuItems = [
   {
     label: 'Home',
-    href: 'index.html',
+    href: `${BASE_URL}index.html`,
   },
   {
     label: 'Movies & Shows',
-    href: 'movies.html',
+    href: `${BASE_URL}movies.html`,
   },
   {
     label: 'Support',
-    href: 'support.html',
+    href: `${BASE_URL}support.html`,
   },
   {
     label: 'Subscriptions',
-    href: 'subscriptions.html',
+    href: `${BASE_URL}subscriptions.html`,
   },
 ]
 
 console.log('URL:', url)
 console.log('ITEMS:', menuItems)
 
-const currentPage = url.match(/[^/]+$/)?.[0] || 'index.html'
+const currentPage = url.split('/').pop() || 'index.html'
 
   return (
     <header
