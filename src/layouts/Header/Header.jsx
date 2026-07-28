@@ -10,24 +10,29 @@ const Header = (props) => {
     isFixed,
   } = props
 
-  const menuItems = [
-    {
-      label: 'Home',
-      href: '/',
-    },
-    {
-      label: 'Movies & Shows',
-      href: '/movies',
-    },
-    {
-      label: 'Support',
-      href: '/support',
-    },
-    {
-      label: 'Subscriptions',
-      href: '/subscriptions',
-    },
-  ]
+ const menuItems = [
+  {
+    label: 'Home',
+    href: 'index.html',
+  },
+  {
+    label: 'Movies & Shows',
+    href: 'movies.html',
+  },
+  {
+    label: 'Support',
+    href: 'support.html',
+  },
+  {
+    label: 'Subscriptions',
+    href: 'subscriptions.html',
+  },
+]
+
+console.log('URL:', url)
+console.log('ITEMS:', menuItems)
+
+const currentPage = url === '/' ? 'index.html' : url.split('/').pop()
 
   return (
     <header
@@ -51,7 +56,7 @@ const Header = (props) => {
                 <li className="header__menu-item" key={index}>
                   <a
                     className={classNames('header__menu-link', {
-                      'is-active': href === url
+                      'is-active': href === currentPage,
                     })}
                     href={href}
                   >
